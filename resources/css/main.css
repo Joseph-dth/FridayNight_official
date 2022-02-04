@@ -1,0 +1,110 @@
+/* -----------------------------------------*/
+/*Basic setup*/
+/* -----------------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #1d1d1d;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* -----------------------------------------*/
+/*Reusable compoments*/
+/* -----------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+/*---------BUTTONS--------*/
+
+
+/* -----------------------------------------*/
+/*Header*/
+/* -----------------------------------------*/
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 2px 2px #e0e0e0;
+    
+}
+.logo {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    
+}
+
+.nav-links li {
+    list-style: none;
+    transition:border-bottom:0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+    border-bottom:2px solid #2980b9;
+    
+}
+
+.nav-links a:link,
+.nav-links a:visited {
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color:  #555;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+
+

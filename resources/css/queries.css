@@ -1,0 +1,277 @@
+
+
+
+@media only screen and (max-width :1200px) {
+    
+    .title-box {
+        right: 15vh;
+    }
+    
+    .rwd-img {padding: 0 3% 0 3%;}
+    .help-t {padding-left: 4%;}
+    
+    footer .row {width: 85%;}
+}
+
+
+
+/*IPAD*/
+@media only screen and (max-width :1024px) {
+    
+
+
+    .nav-links {
+        width: 50%;
+    }
+
+    .coding {
+        width: 50%;
+    }
+
+    .title-box {
+        height: -10vh;
+        right: 5vh;
+    }
+
+    .title-box p {
+        margin-bottom: 1.5vh;
+    }
+
+    .dream-btn {
+        margin-top: 2.5vh;
+    }
+
+    /*
+    .main-nav {display: none;}
+    
+    .mobile-navi {display: inline-block; padding-right: 5%; font-size: 350%;}
+    .mobile-navi2 {display: none; padding-right: 5%; font-size: 350%;}
+    .main-nav {float: left; width: 65%;}
+    
+    .main-nav li {
+        display: block;
+        float: none;
+        padding-bottom: 10px;
+        padding-left: 5%;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+        border: 0;
+    }
+    */
+ 
+    body {font-size: 18px;}
+    section {padding: 60px 0;}
+    .col {width: 100%;}
+    
+    .rwd-img {
+    margin: 40px auto 0 auto;
+    width: 80%;
+    float: none;
+    }
+    
+  
+    
+    
+   
+    
+    
+    .rwd {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.62);
+        padding-bottom: 65px;
+    }
+    
+    .rwd-p {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    }
+    
+    .rwd-p p{
+        float: left;
+        display: inline-block;
+        width: 80%;
+        font-size: 150%;
+        padding-left: 10%;
+    }
+    .rwd-p a:link{
+        float: left;
+        margin-top: 60px;
+    }
+    
+    
+    .help-t {
+        
+        text-align: center;
+        
+    }
+    
+    .help li {
+        padding-left: 37%;
+    }
+
+
+    .help a:link {
+        margin-bottom:20px;
+        text-align: center;
+    }
+    
+}
+
+/*larger phone*/
+@media only screen and (max-width :768px) {
+
+    header {
+        overflow: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(255, 255, 255, 0.94);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .home-section {
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        right: 0;
+        margin: 0;
+
+    }
+
+    .svg-coding {display: none;}
+
+    .title-box {
+        position: relative;
+        margin-top: -7vh;
+        text-align: center; 
+        padding-left: 10vh;
+    }
+
+    .title-box h2 {
+        font-size: 300%;
+    }
+    .title-box p {
+        font-size: 90%;
+        margin-bottom: 2vh;
+    }
+
+    .coding {
+        display: none;
+    }
+    .product-text h2 {font-size: 125%;}
+    .contact li {display: block;float: none;text-align: left;width: 80%;}
+    .rwd {padding-bottom: 40px;}
+    .rwd-p p{width: 70%;}
+
+}
+
+
+
+/* Small phones*/
+@media only screen and (max-width :480px) {
+   
+    .home-section {height: 70vh;}
+    .title-box {margin-top: 0vh;}
+    .product-i h2 {font-size: 130%;}
+    .help {margin-right: 22%;}
+    font-size {100%;}
+    .rwd {margin-bottom: 0px;}
+    .rwd-p p{font-size: 100%;}
+    .section-help{padding-top: 0;}
+    .section-products .box:first-child {
+        padding-left: 1%;
+    }
+    .product-i{font-size: 100%; }
+    .section-products .btnl {
+        margin-left: 3%;
+    }
+    .product-text {margin-bottom: 0;}
+    
+    .rwd {padding-bottom: 20px;}
+}
+
+@media only screen and (max-width :425px) {
+    .mobile-navi {font-size: 250%;}
+
+   .help li {
+        padding-left: 25%;
+    }
+    .title-box h2 {
+        font-size: 200%;
+    }
+
+}
+
+@media only screen and (max-width :320px) {
+    .rwd-p p {
+        margin: 0;
+        padding: 0;    }
+    
+    .rwd-p a{
+        margin:0;
+        padding:0;    
+    }    
+    footer {
+        text-align: center;
+    }
+    .contact {
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        width: 50%;
+    }
+    .help {
+        font-size: 80%;
+    }
+
+
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+
+}
+

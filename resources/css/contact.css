@@ -1,0 +1,444 @@
+/* -----------------------------------------*/
+/*Basic setup*/
+/* -----------------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #1d1d1d;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* -----------------------------------------*/
+/*Reusable compoments*/
+/* -----------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+/*---------BUTTONS--------*/
+
+
+
+
+/*---------HEADING--------*/
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 240%;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+    word-spacing: 4px;
+    
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    display: block;
+    color:#2980b9;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/*h2:after {
+    display: block;
+    height:2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}*/
+
+.border {
+    display: inline-block;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #2980b9;
+    margin-left: 5%;
+
+}
+/* -----------------------------------------*/
+/*Header*/
+/* -----------------------------------------*/
+/*
+header {
+    background-color: rgba(143, 198, 235, 0.28);
+}
+
+
+.logo {
+    margin-right: 30%; 
+    margin-top: 3px;
+}
+
+
+.main-nav{
+    list-style: none;
+    margin-top: 0;
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+
+.main-nav li {
+    padding-left: 0;
+    float: left;
+    margin-left: 35px;
+    
+}
+
+
+.sticky {
+    position: fixed;
+    top 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 2px 2px #e0e0e0;
+    height: 60px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 0px 0px;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 130%;
+    border-bottom: 2px solid transparent;
+    transition:border-bottom:0.2s;
+    padding-right: 0;
+}
+
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+    border-bottom:2px solid #2980b9;
+    
+}
+
+.mobil-nav-icon {
+    display: none;
+}
+
+*/
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 2px 2px #e0e0e0;
+    
+}
+.logo {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    
+}
+
+.nav-links li {
+    list-style: none;
+    transition:border-bottom:0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+    border-bottom:2px solid #2980b9;
+    
+}
+
+.nav-links a:link,
+.nav-links a:visited {
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color:  #555;
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+
+
+/* -----------------------------------------*/
+/*FORM*/
+/* -----------------------------------------*/
+
+.section-contact-form {
+    padding-top: 300px;
+}
+
+.section-contact-form p {
+    color: gray;
+    margin-bottom: 300px;
+}
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-text {
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 69%;
+}
+
+.product1 .btn-c span:hover,
+.product2 .btn-c span:hover, 
+.product3 .btn-c span:hover 
+{
+    border: 3px solid #2980b9;
+}
+
+
+.btn-c input[type="radio"].toggle {
+  display: none;
+}
+
+.product1 .btn-c span {
+    font-size: 120%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid #2980b9;
+    padding: 25px 70px;
+    transition: 0.2s;
+}
+
+.btn-c input:checked ~ span {
+    color: #2980b9;
+    border: 2px solid #2980b9;
+
+}
+.product1,
+.product2,
+.product3 {
+    margin-bottom: 100px;
+    text-align: center;
+}
+.product1 {
+    
+    margin-top: 100px;
+}
+
+.product 2 .btn-c span:hover {
+    border: 3px solid #2980b9;
+
+}
+
+
+.product2 .btn-c span {
+    font-size: 120%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid #2980b9;
+    padding: 25px 104px;
+    transition: 0.2s;
+}
+
+.product3 .btn-c span {
+    font-size: 120%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid #2980b9;
+    padding: 25px 129px;
+    transition: 0.2s;
+}
+.product3 {
+    margin-bottom: 20vh;
+}
+
+.email {
+    position: relative;
+    width: 80%;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+
+.email label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #2980b9;
+}
+
+.email input {
+    width:100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.email label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #2980b9;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+.content-email {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    font-size: 150%;
+    transition: all 0.3s ease;
+}
+
+.email input:focus + .label-email .content-email {
+    transform: translateY(-240%);
+    font-size: 14px;
+    color: #2980b9;
+}
+.email input:valid + .label-email .content-email {
+    transform: translateY(-240%);
+    font-size: 14px;
+    color: #2980b9;
+}
+
+.email input:focus + .label-email::after, .email input:valid + .label-email::after{
+    transform: translateX(0%);
+}
+
+.submit input {
+    float: right;
+    margin-right: 10%;
+    font-size: 130%;
+}
+
+.submit input:link,
+.submit input:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    border: 1px solid #2980b9;
+    color: #2980b9;
+}
+
+
+.submit input:hover,
+.submit input:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #176fa8;
+    border: 1px solid #176fa8;
+    color: #fff;
+}
+
+/* -----------------------------------------*/
+/*FOOTER*/
+/* -----------------------------------------*/
+
+
+footer {
+     padding-top: 40px;
+    background-color: rgba(206, 205, 205, 0.25);
+}
+
+.contact li {
+    list-style: none;
+    float: left;
+    width: 22%;
+    padding-bottom: 20px;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+
+.contact a:link,
+.contact a:visited{
+    color: rgb(137, 134, 134);
+    margin-left: 5%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact a:hover,
+.contact a:active{
+    color: #2980b9;
+}
+
+.contact {
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 80%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+

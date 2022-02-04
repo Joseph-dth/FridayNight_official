@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hang-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../vendors/css/Grid.css">
+    
+    <link rel="stylesheet" type="text/css" href="../resources/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/queries-contact.css">
+    <!--<link rel="stylesheet" type="text/css" href="../resources/css/main.css">!-->
+    
+    <title>聯絡我們</title>
+    
+</head>
+
+
+<body>
+    <header>
+            <nav>
+                <div class="logo">
+                    FridayNight
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">關於我們</a></li>
+
+                    <li><a href="../index.html#products">服務</a></li>
+                    <li><a href="../index.html#at">相關文章</a></li>
+                    <li><a href="./contact.html">聯絡我們</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+
+                </div>
+            </nav>
+    </header>
+    <section class="section-contact-form">
+        <div class="row">
+            
+            <h2>聯絡我們</h2>
+            <p>我們很樂意了解更多有關您的業務，請完成下列的表單使我們能更好的幫助您。</p>
+            <h2 class="form-text">您目前想諮詢的方案是？</h2>
+            
+          <form method="POST" action="../resources/database/connect.php" class="contact-form">
+                <div class="row product1">
+                    <div class="space">
+                      <label class="col span-1-of-2 btn-c toggle">
+                        <input class="toggle" type="radio" name="product" value="newproduct"><span>打造全新的產品</span>
+                      </label>
+                    </div>
+                    <div class="space">
+                      <label class="col span-1-of-2 btn-c toggle">
+                        <input class="toggle" type="radio" name="product" value="updateproduct"><span>升級現有的產品</span>
+                      </label>
+                    </div>
+                </div>
+                <div class="row product2">
+                    <div class="space">
+                      <label class="col span-1-of-2 btn-c toggle">
+                        <input class="toggle" type="radio" name="product" value="consult"><span>產品諮詢</span>
+                      </label>
+                    </div>
+                    <div class="space">
+
+                      <label class="col span-1-of-2 btn-c toggle">
+                        <input class="toggle" type="radio" name="product" value="maintain"><span>系統維護</span>
+                      </label>  
+                    </div>
+                </div>
+                <div class="row product3">
+                    <div class="space">
+
+                      <label class="col span-1-of-2 btn-c toggle">
+                        <input class="toggle" type="radio" name="product" value="other"><span>其他</span>
+                      </label>
+                    </div>
+                </div>
+                <div class="row email">
+                    
+                    <input type="text" name="email" id="email" autocomplete="off" required>
+                    <label for="email" class="label-email">
+                        <span class="content-email"> 請問您的電子郵件信箱是？</span>
+                    </label>
+                </div>
+                <div class="row email">
+                    <input type="text" name="name" id="name" autocomplete="off" required>
+                    <label for="name" class="label-email">
+                        <span class="content-email">該如何稱呼您呢？</span>
+                    </label>
+                </div>
+                <div class="row submit">
+                    <input type="submit" value="Submit">
+                </div>
+
+          </form>
+            
+        </div>
+    </section>
+    <!--
+    <script language="php">
+      use PHPMailer\PHPMailer\PHPMailer;
+      use PHPMailer\PHPMailer\SMTP;
+      use PHPMailer\PHPMailer\Exception;
+      if(isset($_POST['submit'])){
+        //phpmailer setting
+
+        require '../resources/database/vendor/phpmailer/phpmailer/src/Exception.php';
+       
+
+        require '../resources/database/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+        require '../resources/database/vendor/phpmailer/phpmailer/src/SMTP.php';
+        
+        
+        //database setting
+        $program = filter_input(INPUT_POST, 'product');
+        $name = filter_input(INPUT_POST, 'name');
+        $email= filter_input(INPUT_POST, 'email');
+        
+        $host = "113.196.82.202";
+        $dbusername = "root";
+        $dbpassword = "test123";
+        $dbname = "FridayNight";
+        //mail setting
+        $mail = new PHPMailer(true);
+        $result='';
+        $mail->Host = '192.168.1.4';                    // Set the SMTP server to send through
+        $mail->Port = 25;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->SMTPAuth = false;                                   // Enable SMTP authentication
+        $mail->setFrom('simpson.1025.1213@gmail.com');
+        $mail->addAddress('simpson.1025.1213@gmail.com');     // Add a recipient
+        $mail->addAddress($email);     // Add a recipient
+        $body = ' 
+                <div style="text-align: center;">
+                    <p>FridayNight工作團隊</p>
+                </div>
+                <p>我們已收到您的回覆，不知道您何時有空呢？</p>
+                <a href="https://forms.gle/Un5ghAwDrC7DTcnD8">預約會談</a>
+                <p>FridayNight全體工作人員敬上</p>';
+        
+        //$mail->addAddress('watchman99@gmail.com');     // Add a recipient
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'FridayNight確認信件';
+        $mail->Body    = $body;
+        $mail->AltBody = strip_tags($body);
+        
+        if($mail->send()){
+            $result="Message has been sent";
+        }else{
+            $result="Somthing went wrong";
+        }
+        echo $result;
+      }
+
+    </script>
+    !-->
+    <footer>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <h3>FridayNight</h3>
+                </div>
+                <!--<div class="col span-2-of-3 contact">
+                    <ul>
+                        <li class="cu"><a href="./">Contact us</a></li>
+                        <li><a href="#"><em>0986038500</em></a></li>
+                        <li><a href="#"><em>simpson.1025.1213@gmail.com</em></a></li>
+
+                    </ul>
+                </div>!-->
+                <div class="row">
+                    <p>Copyright &copy; FridayNight. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+      
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="../vendors/js/jquery.waypoints.min.js"></script>
+        
+        
+    <script src="../vendors/js/jquery.waypoints.min.js"></script>
+    <script src="../resources/js/script.js"></script>
+    
+</body>
+</html>
+

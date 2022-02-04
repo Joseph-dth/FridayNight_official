@@ -1,0 +1,203 @@
+
+
+
+@media only screen and (max-width :1200px) {
+    
+
+    
+    footer .row {width: 85%;}
+}
+
+
+
+/*IPAD*/
+@media only screen and (max-width :1024px) {
+    
+    .row {
+        max-width: 768px;
+    margin: 0 auto;
+    }
+
+    .nav-links {
+        width: 50%;
+    }
+
+    .coding {
+        width: 50%;
+    }
+
+    .title-box {
+        height: -10vh;
+        right: 5vh;
+    }
+
+    .title-box p {
+        margin-bottom: 1.5vh;
+    }
+
+    .dream-btn {
+        margin-top: 2.5vh;
+    }
+
+    /*
+    .main-nav {display: none;}
+    
+    .mobile-navi {display: inline-block; padding-right: 5%; font-size: 350%;}
+    .mobile-navi2 {display: none; padding-right: 5%; font-size: 350%;}
+    .main-nav {float: left; width: 65%;}
+    
+    .main-nav li {
+        display: block;
+        float: none;
+        padding-bottom: 10px;
+        padding-left: 5%;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+        border: 0;
+    }
+    */
+ 
+    body {font-size: 18px;}
+    section {padding: 60px 0;}
+    .col {width: 100%;}
+    .section-img .img:first-child{display: none;}
+    
+
+    
+  
+    
+    
+   
+    
+    
+    
+}
+
+/*larger phone*/
+@media only screen and (max-width :768px) {
+    
+    .row {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    header {
+        overflow: hidden;
+    }
+    
+    body {
+        font-size:16px;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(255, 255, 255, 0.94);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .step {
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+    }
+}
+
+
+    
+
+
+
+/* Small phones*/
+@media only screen and (max-width :480px) {
+    .row {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+     body {
+        font-size:15px;
+    }
+   
+}
+@media only screen and (max-width :425px) {
+    .row {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+     body {
+        font-size:14px;
+    }
+    
+
+}
+@media only screen and (max-width :320px) {
+    .row {
+        max-width: 290px;
+        margin: 0 auto;
+    }
+    
+     body {
+        font-size:13px;
+    }
+    footer {
+        text-align: center;
+    }
+    .contact {
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        width: 50%;
+    }
+    .help {
+        font-size: 80%;
+    }
+    .contact li {
+        display: block;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+
+}
+

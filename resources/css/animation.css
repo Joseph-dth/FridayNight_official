@@ -1,0 +1,65 @@
+
+
+#w-r {
+    animation: hands .15s ease-in-out infinite alternate;
+
+    transform-origin: left;
+    transform-box: fill box;
+
+}
+
+#w-l {
+    animation: hand-1 .15s ease-in-out infinite alternate;
+
+    transform-origin: left;
+    transform-box: fill box;
+}
+
+#m-l {
+    animation: hand-3 .15s ease-in-out infinite alternate;
+    transform-origin: right;
+    transform-box: fill box;
+}
+
+#m-r {
+    animation: hand-2 .15s ease-in-out infinite alternate;
+    transform-origin: right;
+    transform-box: fill box;
+}
+@keyframes hands{
+
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-3deg);
+
+    }
+    
+}
+
+@keyframes hand-1 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(3deg);
+    }
+}
+
+@keyframes hand-2 {
+    from {
+        transform: rotateZ(-2deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+@keyframes hand-3 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(3deg);
+    }
+}
